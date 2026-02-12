@@ -354,7 +354,7 @@ function Home() {
               {risks.map((risk, index) => (
                 <li key={index}>
                   {typeof risk === 'string'
-                    ? risk
+                    ? risk.replace(/\*\*/g, "") 
                     : risk.title || JSON.stringify(risk)}
                 </li>
               ))}
