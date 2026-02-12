@@ -3,6 +3,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+app.use(cors({
+  origin: [
+    "https://task-generator-livid.vercel.app"
+  ],
+  credentials: true,
+}))
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
